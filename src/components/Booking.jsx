@@ -21,10 +21,10 @@ const Booking = () => {
     useEffect(() => {
         const fetchPackagesAndHotels = async () => {
             try {
-                const packagesResponse = await axios.get('http://localhost:4000/packages');
+                const packagesResponse = await axios.get('https://travel-website-backend-hdgm.onrender.com/packages');
                 setPackages(packagesResponse.data);
 
-                const hotelsResponse = await axios.get('http://localhost:4000/hotels');
+                const hotelsResponse = await axios.get('https://travel-website-backend-hdgm.onrender.com/hotels');
                 setHotels(hotelsResponse.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -38,7 +38,7 @@ const Booking = () => {
         const packageId = e.target.value;
         if (packageId) {
             try {
-                const packageResponse = await axios.get(`http://localhost:4000/packages/${packageId}`);
+                const packageResponse = await axios.get(`https://travel-website-backend-hdgm.onrender.com/packages/${packageId}`);
                 setSelectedPackage(packageResponse.data);
             } catch (error) {
                 console.error('Error fetching package details:', error);
