@@ -6,8 +6,8 @@
 }
 
 body , html{
-  font-family: sans-serif; /* Example font family */
-  overflow-x: hidden; /* Hide horizontal overflow */
+  font-family: sans-serif; 
+  overflow-x: hidden; 
 }
 
 img {
